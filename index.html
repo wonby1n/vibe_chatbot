@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ios-bg"></div>
+    <div class="macbook-mockup">
+        <div class="macbook-screen">
+            <div id="chat-list" class="chat-list">
+                <h2>메시지</h2>
+                <div class="imessage-icon" id="imessage-icon" title="iMessage로 이동"></div>
+                <ul>
+                    <li id="open-chatbot">
+                        <div class="avatar">🤖</div>
+                        <div class="chatbot-info">
+                            <div class="chatbot-name">챗봇</div>
+                            <div class="chatbot-desc">챗봇과 대화하기</div>
+                        </div>
+                    </li>
+                </ul>
+                <button id="toggle-theme" class="theme-btn">🌙 다크/라이트</button>
+                <div class="bubble-color-picker">
+                    <span>말풍선 색상:</span>
+                    <button class="bubble-color-btn" data-color="#007aff" style="background:#007aff"></button>
+                    <button class="bubble-color-btn" data-color="#34c759" style="background:#34c759"></button>
+                    <button class="bubble-color-btn" data-color="#ff9500" style="background:#ff9500"></button>
+                    <button class="bubble-color-btn" data-color="#ff2d55" style="background:#ff2d55"></button>
+                    <button class="bubble-color-btn" data-color="#8e8e93" style="background:#8e8e93"></button>
+                </div>
+            </div>
+            <div class="chat-container" id="chat-container" style="display:none;">
+            <div class="chat-header">
+                    <button id="close-chat" class="close-btn" title="닫기"></button>
+                    <button id="minimize-chat" class="minimize-btn" title="최소화"></button>
+                    <button id="expand-chat" class="expand-btn" title="확대"></button>
+                    <div class="chat-header-center">
+                        <span class="chat-emoji">🤖</span>
+                        <span class="chat-title">챗봇</span>
+                    </div>
+                    <button id="toggle-theme2" class="theme-btn small">🌙</button>
+                </div>
+                <div id="chat-box" class="chat-box"></div>
+                <form id="chat-form">
+                    <div class="input-row">
+                        <input type="text" id="user-input" placeholder="메시지를 입력하세요..." autocomplete="off" required />
+                        <button type="button" id="emoji-btn" title="이모티콘">😊</button>
+                        <button type="button" id="image-btn" title="사진 생성">🖼️</button>
+                        <button type="submit">전송</button>
+                    </div>
+                    <div id="emoji-picker" class="emoji-picker" style="display:none;"></div>
+                </form>
+            </div>
+        </div>
+        <div class="macbook-base"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
